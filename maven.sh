@@ -101,7 +101,7 @@ echo
 echo
 echo "If you see a maven version displayed above, then maven is successfully deployed in your server"
 echo
-sleep 3
+sleep 4
 echo
 echo "                    REMEMBER TO ALWAYS SMILE (*_*)"
 echo
