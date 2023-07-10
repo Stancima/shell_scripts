@@ -21,6 +21,7 @@ sudo yum install wget nano tree vim unzip git-all -y
 echo "The necessary command files successfully installed"
 echo "Proceeding to javajdk installation"
 sudo yum install java-11-openjdk-devel java-1.8.0-openjdk-devel -y
+echo
 echo "`java --version`" successfully deployed
 echo
 sleep 3
@@ -49,13 +50,13 @@ echo
 sudo rm -rf /opt/maven.zip
 echo
 echo
-echo "maven successfully downloaded, unzipped and renamed to maven"
+echo "apache-maven-3.9.3 successfully downloaded, unzipped and renamed to maven"
 # Set Environment Variables in the user's .bashrc file.
 # First create a backup of the .bashrc file.
 sleep 4
 echo
 echo "Setting environment variables in the user's .bashrc file"
-sleep 2
+sleep 3
 echo
 echo "please enter your username"
 echo
@@ -63,8 +64,8 @@ echo
 read username
 echo
 echo
-echo "Creating a backup of user's .bashrc file"
-sleep 2
+echo "Creating a backup of $username's .bashrc file"
+sleep 3
 sudo cp /home/$username/.bashrc /home/$username/.bashrc.bak
 echo
 echo
