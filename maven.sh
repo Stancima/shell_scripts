@@ -11,7 +11,6 @@ echo -e "
 #                                                                    #
 #    Only a user with ADMIN privileges can do this installation      #
 #                                                                    #
-#                                                                    #
 ######################################################################
 "
 sleep 6
