@@ -1,10 +1,10 @@
 #!/bin/bash
 
 #Array of target servers. Replace them with the destination server IP addresses.
-servers=("server1" "server2" "server3")
+servers=("35.91.165.145" "34.220.227.228" "35.87.200.117")
 
 # Source file to copy
-source_file="/home/ec2-user/javaprojs/mwa/target/*.war"
+source_file="/home/ec2-user/javaprojs/mwa/target/tesla.war"
 
 #Destination directory on the servers
 dest_dir="/home/ec2-user/"
@@ -12,7 +12,7 @@ dest_dir="/home/ec2-user/"
 # Loop through the servers and copy the file
 for server in "${servers[@]}"
 do
-        scp "$source_file" "$server:$dest_dir"
+        scp -o "StrictHostKeyChecking=no" -i tomcat.pem  "$source_file" "$server:$dest_dir"
 done
 # The "${servers[@]}" syntax with [@] treats each element of the array as a separate item,
 # rather than treating the entire array as a single item. This is known as array expansion.
