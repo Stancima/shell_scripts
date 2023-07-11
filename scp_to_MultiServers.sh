@@ -1,13 +1,13 @@
 #!/bin/bash
 
 #Array of target servers. Replace them with the destination server IP addresses.
-servers=("35.91.165.145" "34.220.227.228" "35.87.200.117")
+servers=("server1" "server2" "server3")
 
 # Source file to copy
-source_file="/home/ec2-user/javaprojs/mwa/target/tesla.war"
+source_file="/path/to/source/file.txt"
 
 #Destination directory on the servers
-dest_dir="/home/ec2-user/"
+dest_dir="/path/to/destination/dir"
 
 # Loop through the servers and copy the file
 for server in "${servers[@]}"
@@ -16,11 +16,13 @@ do
 done
 # The "${servers[@]}" syntax with [@] treats each element of the array as a separate item,
 # rather than treating the entire array as a single item. This is known as array expansion.
+# the -o "StrictHostKeyChecking=no" option instructs scp to skip host key verification and proceed
+# with the file transfer
 
-#Alternatively, you can create a file, server.txt for example and put the destination server
-#IP addresses there. Then the command(s) below.
+#Alternatively, you can create a file, like "server.txt" for example and put the destination server
+#IP addresses in there, one in each line, then the script below.
 
 #for server in $(cat server.txt);
 #do
-#scp -i tomcat.pem /home/ec2-user/javaprojs/mwa/target/*.war ec2-user@"$server":/home/ec2-user
+#scp -o "StrictHostKeyChecking=no" -i tomcat.pem /path/to/source/file.txt username@destination_IP:/path/to/destination/dir
 #done
