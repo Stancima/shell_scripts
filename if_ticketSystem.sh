@@ -3,7 +3,7 @@
 
 echo "Welcome to the rollercoaster 2023"
 declare -i mybill=0
-read -p "What is your height in cm? " height
+read -p "What is your height in cm?" height
 
 if (($height >= 120)); then
     echo "You can go on a ride on the rollercoaster"
@@ -20,7 +20,9 @@ if (($height >= 120)); then
         mybill=$((mybill + 12))
         echo "Adult tickets are 12 dollars"
     fi
+    sleep 4
     echo "Your final bill is $mybill"
 else
+	sleep 2
     echo "Sorry, you are not tall enough to go on a ride..."
 fi
