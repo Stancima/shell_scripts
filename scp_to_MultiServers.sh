@@ -12,7 +12,7 @@ dest_dir="/path/to/destination/dir"
 # Loop through the servers and copy the file
 for server in "${servers[@]}"
 do
-        scp -o "StrictHostKeyChecking=no" -i tomcat.pem  "$source_file" "$server:$dest_dir"
+        scp -o "StrictHostKeyChecking=no" -i keyfile.pem  "$source_file" "$server:$dest_dir"
 done
 # The "${servers[@]}" syntax with [@] treats each element of the array as a separate item,
 # rather than treating the entire array as a single item. This is known as array expansion.
@@ -24,5 +24,5 @@ done
 
 #for server in $(cat server.txt);
 #do
-#scp -o "StrictHostKeyChecking=no" -i tomcat.pem /path/to/source/file.txt username@destination_IP:/path/to/destination/dir
+#scp -o "StrictHostKeyChecking=no" -i keyfile.pem /path/to/source/file.txt username@destination_IP:/path/to/destination/dir
 #done
