@@ -25,4 +25,5 @@ if (($height >= 120)); then
 else
 	sleep 2
     echo "Sorry, you are not tall enough to go on a ride..."
+    sleep 1
 fi
