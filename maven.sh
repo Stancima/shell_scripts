@@ -9,7 +9,7 @@ echo
 echo -e "
 ######################################################################
 #                                                                    #
-#    Only a user with ADMIN privileges can do this installation      #
+#    Only a user with ADMIN privileges should do this installation   #
 #                                                                    #
 ######################################################################
 "
