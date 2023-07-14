@@ -58,10 +58,18 @@ echo
 echo "Setting environment variables in the user's .bashrc file"
 sleep 3
 echo
-echo "please enter your username"
+# Prompt for username
+echo
+read -p "please enter your username" username
 echo
 echo
-read username
+# Verify if user exists
+if id -u $username >/dev/null 2>$1; then
+    echo "$username let's proceed with maven installation."
+else
+    echo "User $username does not exist. Terminating installation....."
+    exit 1
+fi
 echo
 echo
 echo "Creating a backup of $username's .bashrc file"
