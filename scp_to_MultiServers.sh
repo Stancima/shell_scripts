@@ -1,4 +1,5 @@
 #!/bin/bash
+# Created by Etienne Tawong in July 2023.
 
 #Array of target servers. Replace them with the destination server IP addresses.
 servers=("server1" "server2" "server3")
