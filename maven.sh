@@ -22,7 +22,7 @@ sudo yum install wget nano tree vim unzip git-all -y
 echo "The necessary command files successfully installed"
 echo "Proceeding to javajdk installation"
 sudo yum install java-11-openjdk-devel java-1.8.0-openjdk-devel -y
-echo "`java --version`" successfully deployed
+echo "`java --version` successfully deployed"
 echo
 sleep 3
 echo "Proceeding to Maven download and installation"
